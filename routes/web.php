@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\SumController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageNewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,21 +63,52 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/form', [App\Http\Controllers\FormRequestController::class, 'index']);
-Route::post('/form', [App\Http\Controllers\FormRequestController::class, 'validateform']);
+// Route::get('/form', [App\Http\Controllers\FormRequestController::class, 'index']);
+// Route::post('/form', [App\Http\Controllers\FormRequestController::class, 'validateform']);
 
 
 
-Route::get('/add', [App\Http\Controllers\AddRoomController::class, 'index']);
-Route::post('/add', [App\Http\Controllers\AddRoomController::class, 'store'])->name('add.store');
+// Route::get('/add', [App\Http\Controllers\AddRoomController::class, 'index']);
+// Route::post('/add', [App\Http\Controllers\AddRoomController::class, 'store'])->name('add.store');
 
 
-Route::get('/master', [App\Http\Controllers\PageController::class, 'getIndex']);
+// Route::get('/master', [App\Http\Controllers\PageController::class, 'getIndex']);
 
 
-Route::get('loai-san-pham',[App\Http\Controllers\PageController::class, 'getLoaiSp']);
+// Route::get('loai-san-pham',[App\Http\Controllers\PageController::class, 'getLoaiSp']);
 
-Route::get('chi-tiet-san-pham',[App\Http\Controllers\PageController::class, 'getChitiet']);
-Route::get('lien_he',[App\Http\Controllers\PageController::class, 'getLienhe']);
+// Route::get('chi-tiet-san-pham',[App\Http\Controllers\PageController::class, 'getChitiet']);
+// Route::get('lien_he',[App\Http\Controllers\PageController::class, 'getLienhe']);
 
-Route::get('gioi_thieu', [App\Http\Controllers\PageController::class, 'getAbout']);
+// Route::get('gioi_thieu', [App\Http\Controllers\PageController::class, 'getAbout']);
+
+
+
+Route::get('page', [App\Http\Controllers\PageNewController::class, 'getIndex']);
+
+Route::get('/detail/{id}', [App\Http\Controllers\PageNewController::class, 'getDetail']);
+
+
+Route::get('/contact',[App\Http\Controllers\PageNewController::class, 'getContact']);
+
+Route::get('/about',[App\Http\Controllers\PageNewController::class, 'getAbout']);
+
+
+Route::get('/type/{id}',[App\Http\Controllers\PageNewController::class, 'getType']);
+
+
+Route::get('/admin', [PageNewController::class,'getIndexAdmin']);
+
+
+Route::get('/admin-add-form',[PageNewController::class,'getAdminAdd'])->name('add-product');
+
+Route::post('/admin-add-form',[PageNewController::class,'postAdminAdd']);
+
+Route::get('/admin-edit-form/{id}', [PageNewController::class, 'getAdminEdit']);
+
+Route::post('/admin-edit',[PageNewController::class,'postAdminEdit']);
+
+Route::post('/admin-delete/{id}',[PageNewController::class,'postAdminDelete']);
+
+Route::get('admin-export',[PageNewController::class,'exportAdminProduct'])->name('export');
+
