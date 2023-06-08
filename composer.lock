@@ -4,11 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "f0c8d8bcc1a0ef36d50280213dabd481",
-    "packages": [
-        {
-=======
     "content-hash": "0fdd09292f0f00e261e790ca185bb271",
     "packages": [
         {
@@ -571,7 +566,6 @@
             "time": "2023-02-25T20:23:15+00:00"
         },
         {
->>>>>>> origin/main
             "name": "guzzlehttp/guzzle",
             "version": "7.7.0",
             "source": {
@@ -897,8 +891,6 @@
             "time": "2023-04-17T16:11:26+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "guzzlehttp/uri-template",
             "version": "v1.0.1",
             "source": {
@@ -2441,7 +2433,6 @@
             "time": "2019-01-08T18:20:26+00:00"
         },
         {
->>>>>>> origin/main
             "name": "psr/http-client",
             "version": "1.0.2",
             "source": {
@@ -2602,8 +2593,6 @@
             "time": "2023-04-04T09:54:51+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "psr/log",
             "version": "3.0.0",
             "source": {
@@ -2781,7 +2770,6 @@
             "time": "2023-05-23T02:31:11+00:00"
         },
         {
->>>>>>> origin/main
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -2826,8 +2814,6 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "ramsey/collection",
             "version": "2.0.0",
             "source": {
@@ -3164,7 +3150,6 @@
             "time": "2023-03-20T16:43:42+00:00"
         },
         {
->>>>>>> origin/main
             "name": "symfony/deprecation-contracts",
             "version": "v3.3.0",
             "source": {
@@ -3229,22 +3214,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
             "time": "2023-05-23T14:45:45+00:00"
-=======
-            "time": "2023-03-01T10:25:55+00:00"
-<<<<<<< HEAD
-        }
-    ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-=======
->>>>>>> cc73f19eeebc276483b965d32cde5f507111ff94
         },
         {
             "name": "symfony/error-handler",
@@ -7964,7 +7934,6 @@
     "platform": {
         "php": "^8.1"
     },
->>>>>>> origin/main
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

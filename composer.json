@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-    "require": {
-        "guzzlehttp/guzzle": "^7.5"
-    }
-=======
+
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
@@ -68,5 +64,4 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true
->>>>>>> origin/main
 }

@@ -42,7 +42,7 @@ class PageNewController extends Controller
     }
 
     public function getAdminAdd(){
-        return view('pageadmin.formAdd');
+        return view('pageadmin.f_edit');
     }
 
     public function postAdminAdd(Request $request)
