@@ -1,0 +1,27 @@
+
+[
+    {
+        "hoten" : "Bùi Xuân Hoàn",
+        "quequan" : "Quảng Trị",
+        "gioitinh" : "Nam",
+        "sodienthoai" : "12345678"
+    },
+    {
+        "hoten" : "A Dủ",
+        "quequan" : "Kon Tum",
+        "gioitinh" : "Nam",
+        "sodienthoai" : "12345678"
+    },
+    {
+        "hoten" : "Nguyễn Văn Biên",
+        "quequan" : "Quảng Trị",
+        "gioitinh" : "Nam",
+        "sodienthoai" : "12345678"
+    },
+    {
+        "hoten" : "Phan Thanh Lực",
+        "quequan" : "Quảng Trị",
+        "gioitinh" : "Nam",
+        "sodienthoai" : "12345678"
+    }
+]
