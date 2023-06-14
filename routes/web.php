@@ -3,6 +3,7 @@
 use App\Http\Controllers\SumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageNewController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,26 +90,46 @@ Route::get('page', [App\Http\Controllers\PageNewController::class, 'getIndex']);
 Route::get('/detail/{id}', [App\Http\Controllers\PageNewController::class, 'getDetail']);
 
 
-Route::get('/contact',[App\Http\Controllers\PageNewController::class, 'getContact']);
+Route::get('/contact', [App\Http\Controllers\PageNewController::class, 'getContact']);
 
-Route::get('/about',[App\Http\Controllers\PageNewController::class, 'getAbout']);
-
-
-Route::get('/type/{id}',[App\Http\Controllers\PageNewController::class, 'getType']);
+Route::get('/about', [App\Http\Controllers\PageNewController::class, 'getAbout']);
 
 
-Route::get('/admin', [PageNewController::class,'getIndexAdmin']);
+Route::get('/type/{id}', [App\Http\Controllers\PageNewController::class, 'getType']);
 
 
-Route::get('/admin-add-form',[PageNewController::class,'getAdminAdd'])->name('add-product');
+Route::get('/admin', [PageNewController::class, 'getIndexAdmin']);
 
-Route::post('/admin-add-form',[PageNewController::class,'postAdminAdd']);
+
+Route::get('/admin-add-form', [PageNewController::class, 'getAdminAdd'])->name('add-product');
+
+Route::post('/admin-add-form', [PageNewController::class, 'postAdminAdd']);
 
 Route::get('/admin-edit-form/{id}', [PageNewController::class, 'getAdminEdit']);
 
-Route::post('/admin-edit',[PageNewController::class,'postAdminEdit']);
+Route::post('/admin-edit', [PageNewController::class, 'postAdminEdit']);
 
-Route::post('/admin-delete/{id}',[PageNewController::class,'postAdminDelete']);
+Route::post('/admin-delete/{id}', [PageNewController::class, 'postAdminDelete']);
 
-Route::get('admin-export',[PageNewController::class,'exportAdminProduct'])->name('export');
+Route::get('admin-export', [PageNewController::class, 'exportAdminProduct'])->name('export');
 
+
+
+Route::get('/register', function () {
+    return view('users.register');
+});
+
+
+Route::post('/register',[UserController::class,'Register']);
+
+
+
+Route::get('/login', function () {
+    return view('users.login');
+    });
+
+
+
+Route::post('/login',[UserController::class,'Login']);
+
+Route::get('/logout',[UserController::class,'Logout']);
