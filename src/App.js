@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Home from "./Home";
 import { Row, Col } from "react-bootstrap";
 import Cart from "./Cart";
@@ -12,6 +13,7 @@ import AdminPage from "./Adminpage";
 import ShowProduct from "./ShowProLaza";
 import IndexLaza from "./IndexLaza";
 import ReviewPage from "./ShoppingCart";
+import Signin from './Login/Signin';
 export default class App extends React.Component {
   render() {
     return (
@@ -21,8 +23,9 @@ export default class App extends React.Component {
             <Index />
           </CartProvider> */}
             {/* <ShowProduct /> */}
-            <IndexLaza/>
+            {/* <IndexLaza/> */}
             {/* <ReviewPage/> */}
+            <Signin/>
           </>
   
     );
