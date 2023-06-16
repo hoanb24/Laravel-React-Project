@@ -36,3 +36,6 @@ Route::get('/get-product-laza', [APIController::class, 'getLazaP']);
 Route::post('/add-product-laza', [APIController::class, 'addP']);
 Route::delete('/delete-product-laza/{id}', [APIController::class, 'deleteP']);
 Route::put('/edit-product-laza/{id}', [APIController::class, 'editP']);
+
+
+Route::post('/add-orders',[APIController::class,'addOrder']);

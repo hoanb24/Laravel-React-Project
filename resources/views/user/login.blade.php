@@ -34,7 +34,7 @@
 </div>
 <div class="form-block">
 <label for="pw">Password*</label>
-<input type="password" id="pw" name="pw" required>
+<input type="password" id="password" name="password" required>
 </div>
 <div class="form-block">
 <button type="submit" class="btn btn-primary">Login</button>
@@ -43,6 +43,10 @@
 <div class="col-sm-3"></div>
 </div>
 </form>
+@if (!$errors)
+<a>SDsads</a>
+
+@endif
 <p class="text-center">Nếu chưa có tài khoản vui lòng <a href="/register">Đăng ký</a>!</p>
 </div> <!-- #content -->
 </div>

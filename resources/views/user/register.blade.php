@@ -15,7 +15,7 @@
 </div>
 <div class="container">
 <div id="content">
-@include('error')
+
 <form action="register" method="POST" class="beta-form-checkout">
 @csrf
 <div class="row">

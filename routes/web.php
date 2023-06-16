@@ -116,7 +116,7 @@ Route::get('admin-export', [PageNewController::class, 'exportAdminProduct'])->na
 
 
 Route::get('/register', function () {
-    return view('users.register');
+    return view('user.register');
 });
 
 
@@ -125,11 +125,8 @@ Route::post('/register',[UserController::class,'Register']);
 
 
 Route::get('/login', function () {
-    return view('users.login');
+    return view('user.login');
     });
-
-
-
 Route::post('/login',[UserController::class,'Login']);
 
 Route::get('/logout',[UserController::class,'Logout']);

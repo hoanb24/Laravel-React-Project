@@ -6,22 +6,28 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
-    public function Login(Request $request){
-        $login = [
-            'email' => $request->input('email'),
-            'password' => $request->input('pw')
-        ];
-        if(Auth::attempt($login)){
-            $user = Auth::user();
-            Session::put('user',$user);
-            echo '<script>alert("Đăng nhập thành công");window.location.assign("trangchu")</script>';
-        }else {
-            echo '<script>alert("Đăng nhập thất bại");window.location.assign("login")</script>';
-        }
+    public function Login(Request $request)
+    {
+
+            $login = [
+                'email' => $request->email,
+                'password' => $request->password
+            ];
+            // dd(Auth::attempt($login));
+            $check = DB::table('users')->where('email',$login['email'], 'password',$login['password']);
+
+            if($check){
+                return true;
+            }
+            else {
+                return false;
+            }
+      
     }
 
     public function Logout()
@@ -30,7 +36,8 @@ class UserController extends Controller
         Session::forget('cart');
         return redirect('/trangchu');
     }
-    public function Register(Request $request){
+    public function Register(Request $request)
+    {
         $input = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users',
@@ -45,7 +52,7 @@ class UserController extends Controller
         <script>
             alert ("Đăng ký thành công. Vui lòng đăng nhập.");
             window.location.assign("login");
-        </script>
+        </>
         ';
     }
 }
