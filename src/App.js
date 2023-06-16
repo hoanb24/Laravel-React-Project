@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import Home from "./Home";
 import { Row, Col } from "react-bootstrap";
 import Cart from "./Cart";
@@ -8,26 +8,38 @@ import Index from "./Components";
 import { CartProvider } from "react-use-cart";
 // import "./index.css";
 // import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminPage from "./Adminpage";
 import ShowProduct from "./ShowProLaza";
 import IndexLaza from "./IndexLaza";
 import ReviewPage from "./ShoppingCart";
-import Signin from './Login/Signin';
+import Signin from "./Login/Signin";
+import ShoppingCart from "./SC";
+import MainHeader from "./MainHeader";
 export default class App extends React.Component {
   render() {
     return (
-   
-          <>
-            {/* <CartProvider>
-            <Index />
-          </CartProvider> */}
-            {/* <ShowProduct /> */}
-            {/* <IndexLaza/> */}
-            {/* <ReviewPage/> */}
-            <Signin/>
-          </>
-  
+      // <>
+      //   {/* <CartProvider>
+      //   <Index />
+      // </CartProvider> */}
+      //   {/* <ShowProduct /> */}
+      //   {/* <IndexLaza/> */}
+      //   {/* <ReviewPage/> */}
+      //   <Signin/>
+
+      // </>
+      
+      <Router>
+      <MainHeader/>  
+      
+      <Routes>
+        {/* Các thành phần khác */}
+        <Route path="/login" element={<Signin />} />
+        <Route path="/trangchu" element={<IndexLaza/>} />
+        <Route path ="/shoppingcart" element= {<ShoppingCart/>} />
+      </Routes>
+    </Router>
     );
   }
 }
@@ -54,8 +66,6 @@ export default class App extends React.Component {
 //     </BrowserRouter>
 //   );
 // }
-
-
 
 // import React, { Component } from 'react';
 // import './App.css';
