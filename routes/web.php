@@ -130,3 +130,22 @@ Route::get('/login', function () {
 Route::post('/login',[UserController::class,'Login']);
 
 Route::get('/logout',[UserController::class,'Logout']);
+
+
+
+
+
+
+
+    
+Route::get('/product', [App\Http\Controllers\ShoppingCartController::class, 'getIndex']);
+
+Route::post('/cart/add', [App\Http\Controllers\ShoppingCartController::class, 'addItem'])->name('cart.add');
+
+Route::post('/remove-item',[App\Http\Controllers\ShoppingCartController::class, 'removeItem'])->name('removeItem');
+
+
+
+Route::get('/shoppingcart', [App\Http\Controllers\ShoppingCartController::class, 'getShoppingCart']);
+
+Route::post('/checkout', [App\Http\Controllers\ShoppingCartController::class, 'checkout'])->name('checkout');
